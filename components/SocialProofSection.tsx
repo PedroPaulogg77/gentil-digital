@@ -6,7 +6,11 @@ import Image from 'next/image';
 import { SectionDivider } from './SectionDivider';
 
 export function SocialProofSection() {
-  const videos = [1, 2, 3, 4];
+  const youtubeVideos = [
+    { id: "itBgl68axJI", title: "Depoimento Consultoria" },
+    { id: "pZMN8OqQ7-4", title: "Depoimento Marketing" },
+    { id: "DTf_qEbjfVs", title: "Depoimento Crescimento" }
+  ];
   
   // Real logos from Google Drive
   const clientLogos = [
@@ -46,32 +50,23 @@ export function SocialProofSection() {
           </p>
         </motion.div>
 
-        <div className="flex overflow-x-auto pb-8 gap-6 snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-4 mb-20 scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-          {videos.map((vid, idx) => (
+        <div className="flex overflow-x-auto pb-8 gap-6 snap-x snap-mandatory md:grid md:grid-cols-3 mb-20 scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] justify-center">
+          {youtubeVideos.map((vid, idx) => (
             <motion.div 
               key={idx}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: idx * 0.1 }}
-              className="relative aspect-[9/16] bg-bg-card rounded-2xl overflow-hidden border border-border-card group cursor-pointer shrink-0 w-[85vw] sm:w-[300px] md:w-auto snap-center"
+              className="relative aspect-[9/16] bg-black rounded-2xl overflow-hidden border border-border-card shrink-0 w-[85vw] sm:w-[300px] md:w-auto snap-center shadow-2xl"
             >
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10" />
-              <Image 
-                src={`https://picsum.photos/seed/gentil${vid}/400/700`} 
-                alt={`Depoimento ${vid}`}
-                fill
-                className="object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
-                referrerPolicy="no-referrer"
+              <iframe
+                src={`https://www.youtube.com/embed/${vid.id}?modestbranding=1&rel=0&playsinline=1`}
+                title={vid.title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full border-0"
               />
-              <div className="absolute inset-0 z-20 flex items-center justify-center">
-                <div className="w-14 h-14 rounded-full bg-primary/90 text-white flex items-center justify-center pl-1 group-hover:scale-110 transition-transform duration-300 shadow-[0_0_20px_rgba(232,123,28,0.5)]">
-                  <Play className="w-6 h-6" />
-                </div>
-              </div>
-              <div className="absolute bottom-4 left-4 right-4 z-20">
-                <p className="font-body text-sm font-bold text-white">Depoimento {vid}</p>
-              </div>
             </motion.div>
           ))}
         </div>

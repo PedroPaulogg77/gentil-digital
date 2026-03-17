@@ -1,9 +1,12 @@
 'use client';
 
 import { motion } from 'motion/react';
+import { useRouter } from 'next/navigation';
 import { SectionDivider } from './SectionDivider';
 
 export function ConversionSection() {
+  const router = useRouter();
+
   return (
     <section id="contato" className="py-24 px-6 bg-bg-secondary relative overflow-hidden">
       <SectionDivider />
@@ -36,11 +39,20 @@ export function ConversionSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+              <form 
+                className="space-y-4" 
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  // Simulate form submission process if needed in the future
+                  // ...
+                  router.push('/obrigado');
+                }}
+              >
                 <div className="relative">
                   <input 
                     type="text" 
                     id="nome"
+                    required
                     placeholder=" "
                     className="w-full h-14 px-5 pt-4 pb-2 bg-bg-input border border-border-default rounded-md text-text-primary font-body text-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all peer"
                   />
@@ -53,6 +65,7 @@ export function ConversionSection() {
                   <input 
                     type="text" 
                     id="empresa"
+                    required
                     placeholder=" "
                     className="w-full h-14 px-5 pt-4 pb-2 bg-bg-input border border-border-default rounded-md text-text-primary font-body text-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all peer"
                   />
@@ -65,6 +78,7 @@ export function ConversionSection() {
                   <input 
                     type="text" 
                     id="cargo"
+                    required
                     placeholder=" "
                     className="w-full h-14 px-5 pt-4 pb-2 bg-bg-input border border-border-default rounded-md text-text-primary font-body text-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all peer"
                   />
@@ -77,6 +91,7 @@ export function ConversionSection() {
                   <input 
                     type="email" 
                     id="email"
+                    required
                     placeholder=" "
                     className="w-full h-14 px-5 pt-4 pb-2 bg-bg-input border border-border-default rounded-md text-text-primary font-body text-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all peer"
                   />
@@ -89,6 +104,7 @@ export function ConversionSection() {
                   <input 
                     type="tel" 
                     id="whatsapp"
+                    required
                     placeholder=" "
                     className="w-full h-14 px-5 pt-4 pb-2 bg-bg-input border border-border-default rounded-md text-text-primary font-body text-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all peer"
                   />
