@@ -46,7 +46,7 @@ export function SocialProofSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+        <div className="flex overflow-x-auto pb-8 gap-6 snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-4 mb-20 scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           {videos.map((vid, idx) => (
             <motion.div 
               key={idx}
@@ -54,7 +54,7 @@ export function SocialProofSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: idx * 0.1 }}
-              className="relative aspect-[9/16] bg-bg-card rounded-2xl overflow-hidden border border-border-card group cursor-pointer"
+              className="relative aspect-[9/16] bg-bg-card rounded-2xl overflow-hidden border border-border-card group cursor-pointer shrink-0 w-[85vw] sm:w-[300px] md:w-auto snap-center"
             >
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10" />
               <Image 
