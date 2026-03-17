@@ -4,6 +4,7 @@ import { motion } from 'motion/react';
 import { Maximize, ShieldCheck, UserPlus, Combine } from 'lucide-react';
 import { BackgroundPaths } from '@/components/ui/background-paths';
 import DisplayCards from '@/components/ui/display-cards';
+import { Mobile3DCarousel } from '@/components/ui/mobile-3d-carousel';
 
 export function BenefitsSection() {
   const cards = [
@@ -65,9 +66,17 @@ export function BenefitsSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex justify-center items-center min-h-[500px]"
+            className="flex flex-col justify-center items-center min-h-[500px]"
           >
-            <DisplayCards cards={cards} />
+            {/* Desktop View: Stacked display cards */}
+            <div className="hidden lg:flex w-full justify-center">
+              <DisplayCards cards={cards} />
+            </div>
+
+            {/* Mobile View: 3D Carousel */}
+            <div className="flex lg:hidden w-full justify-center mt-8">
+              <Mobile3DCarousel cards={cards} />
+            </div>
           </motion.div>
         </div>
       </div>
