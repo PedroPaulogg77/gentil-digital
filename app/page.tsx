@@ -13,7 +13,7 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col">
+    <main className="flex min-h-screen flex-col overflow-x-hidden">
       <header className="absolute top-0 left-0 right-0 z-50 flex justify-center items-center h-[80px] pointer-events-none">
         <Link href="/" className="relative w-36 h-12 pointer-events-auto">
           <Image 

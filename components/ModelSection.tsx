@@ -16,8 +16,8 @@ export function ModelSection() {
   return (
     <section id="modelo" className="py-24 px-6 bg-bg-primary relative overflow-hidden">
       {/* Background Orbs */}
-      <div className="absolute top-1/4 -right-1/4 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-1/4 -left-1/4 w-[500px] h-[500px] bg-primary-light/5 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-1/4 -right-1/4 w-[600px] max-w-[80vw] h-[600px] max-h-[80vw] bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-1/4 -left-1/4 w-[500px] max-w-[80vw] h-[500px] max-h-[80vw] bg-primary-light/5 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">

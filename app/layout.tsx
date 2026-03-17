@@ -24,7 +24,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
     <html lang="pt-BR" className={`${funnelDisplay.variable} ${montserrat.variable} scroll-smooth`}>
       <head>
       </head>
-      <body className="font-body bg-bg-primary text-text-primary antialiased min-h-screen selection:bg-primary-glow selection:text-white" suppressHydrationWarning>
+      <body className="font-body bg-bg-primary text-text-primary antialiased min-h-screen selection:bg-primary-glow selection:text-white overflow-x-hidden" suppressHydrationWarning>
         {children}
       </body>
     </html>

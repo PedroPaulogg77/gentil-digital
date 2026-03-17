@@ -106,13 +106,13 @@ export function TechEcosystemSection() {
           </div>
 
           {/* Orbit Tracks */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[260px] h-[260px] rounded-full border border-white/5 border-dashed pointer-events-none" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[420px] h-[420px] rounded-full border border-white/5 border-dashed pointer-events-none" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[260px] h-[260px] max-w-[80vw] max-h-[80vw] rounded-full border border-white/5 border-dashed pointer-events-none" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[420px] h-[420px] max-w-[95vw] max-h-[95vw] rounded-full border border-white/5 border-dashed pointer-events-none" />
 
           {/* Decorative Nodes */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-primary/50" style={{ animation: `orbit 15s linear infinite`, '--start-angle': `45deg`, '--radius': `130px` } as React.CSSProperties} />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-primary/30" style={{ animation: `orbit 25s linear infinite`, '--start-angle': `180deg`, '--radius': `210px` } as React.CSSProperties} />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-white/30" style={{ animation: `orbit 20s linear infinite`, '--start-angle': `300deg`, '--radius': `130px` } as React.CSSProperties} />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-primary/50" style={{ animation: `orbit 15s linear infinite`, '--start-angle': `45deg`, '--radius': `min(130px, 40vw)` } as React.CSSProperties} />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-primary/30" style={{ animation: `orbit 25s linear infinite`, '--start-angle': `180deg`, '--radius': `min(210px, 47vw)` } as React.CSSProperties} />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-white/30" style={{ animation: `orbit 20s linear infinite`, '--start-angle': `300deg`, '--radius': `min(130px, 40vw)` } as React.CSSProperties} />
 
           {/* Orbiting Tools */}
           <AnimatePresence mode="popLayout">
