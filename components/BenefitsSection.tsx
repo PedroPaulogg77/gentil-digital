@@ -19,21 +19,21 @@ export function BenefitsSection() {
       title: "Governança",
       description: "Processos, rituais e indicadores claros.",
       className:
-        "[grid-area:stack] translate-x-6 translate-y-6 hover:-translate-y-8 hover:-translate-x-4 transition-all duration-500 before:absolute before:w-full before:h-full before:bg-black/40 before:rounded-xl before:transition-opacity before:duration-500 hover:before:opacity-0 hover:z-50 z-20",
+        "[grid-area:stack] translate-x-8 translate-y-16 hover:translate-y-4 hover:-translate-x-4 transition-all duration-500 before:absolute before:w-full before:h-full before:bg-black/40 before:rounded-xl before:transition-opacity before:duration-500 hover:before:opacity-0 hover:z-50 z-20",
     },
     {
       icon: <UserPlus className="size-5 text-primary" />,
       title: "Especialistas",
       description: "Profissionais técnicos alocados conforme necessidade.",
       className:
-        "[grid-area:stack] translate-x-12 translate-y-12 hover:-translate-y-0 hover:translate-x-4 transition-all duration-500 before:absolute before:w-full before:h-full before:bg-black/20 before:rounded-xl before:transition-opacity before:duration-500 hover:before:opacity-0 hover:z-50 z-30",
+        "[grid-area:stack] translate-x-16 translate-y-32 hover:translate-y-24 hover:translate-x-4 transition-all duration-500 before:absolute before:w-full before:h-full before:bg-black/20 before:rounded-xl before:transition-opacity before:duration-500 hover:before:opacity-0 hover:z-50 z-30",
     },
     {
       icon: <Combine className="size-5 text-primary" />,
       title: "Integração total",
       description: "Mais previsibilidade comercial e inteligência de dados.",
       className:
-        "[grid-area:stack] translate-x-[1.125rem] translate-y-[1.125rem] sm:translate-x-18 sm:translate-y-18 hover:translate-y-8 hover:translate-x-12 transition-all duration-500 hover:z-50 z-40",
+        "[grid-area:stack] translate-x-24 translate-y-48 hover:translate-y-40 hover:translate-x-12 transition-all duration-500 hover:z-50 z-40",
     },
   ];
 
