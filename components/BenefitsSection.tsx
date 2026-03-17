@@ -12,28 +12,28 @@ export function BenefitsSection() {
       title: "Escala operacional",
       description: "Aumente a capacidade de execução sem ampliar headcount.",
       className:
-        "[grid-area:stack] group-hover:-translate-y-16 group-hover:-translate-x-12 transition-all duration-700 before:absolute before:w-full before:h-full before:bg-black/60 before:rounded-xl before:transition-opacity before:duration-700 group-hover:before:opacity-0 group-hover:z-50 z-10",
+        "[grid-area:stack] hover:-translate-y-16 hover:-translate-x-12 transition duration-700 before:absolute before:w-full before:h-full before:bg-black/60 before:rounded-xl before:transition-opacity before:duration-700 hover:before:opacity-0 hover:z-50 z-10",
     },
     {
       icon: <ShieldCheck className="size-5 text-primary" />,
       title: "Governança",
       description: "Processos, rituais e indicadores claros.",
       className:
-        "[grid-area:stack] translate-x-8 translate-y-16 group-hover:-translate-y-4 group-hover:-translate-x-4 transition-all duration-700 before:absolute before:w-full before:h-full before:bg-black/40 before:rounded-xl before:transition-opacity before:duration-700 group-hover:before:opacity-0 group-hover:z-50 z-20",
+        "[grid-area:stack] translate-x-8 translate-y-16 hover:translate-y-4 hover:-translate-x-4 transition duration-700 before:absolute before:w-full before:h-full before:bg-black/40 before:rounded-xl before:transition-opacity before:duration-700 hover:before:opacity-0 hover:z-50 z-20",
     },
     {
       icon: <UserPlus className="size-5 text-primary" />,
       title: "Especialistas",
       description: "Profissionais técnicos alocados conforme necessidade.",
       className:
-        "[grid-area:stack] translate-x-16 translate-y-32 group-hover:translate-y-8 group-hover:translate-x-4 transition-all duration-700 before:absolute before:w-full before:h-full before:bg-black/20 before:rounded-xl before:transition-opacity before:duration-700 group-hover:before:opacity-0 group-hover:z-50 z-30",
+        "[grid-area:stack] translate-x-16 translate-y-32 hover:translate-y-24 hover:translate-x-4 transition duration-700 before:absolute before:w-full before:h-full before:bg-black/20 before:rounded-xl before:transition-opacity before:duration-700 hover:before:opacity-0 hover:z-50 z-30",
     },
     {
       icon: <Combine className="size-5 text-primary" />,
       title: "Integração total",
       description: "Mais previsibilidade comercial e inteligência de dados.",
       className:
-        "[grid-area:stack] translate-x-24 translate-y-48 group-hover:translate-y-20 group-hover:translate-x-12 transition-all duration-700 group-hover:z-50 z-40",
+        "[grid-area:stack] translate-x-24 translate-y-48 hover:translate-y-40 hover:translate-x-12 transition duration-700 hover:z-50 z-40",
     },
   ];
 
