@@ -5,6 +5,8 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Database, Zap, LayoutDashboard, Megaphone, LineChart } from 'lucide-react';
 import { SectionDivider } from './SectionDivider';
 
+import Image from 'next/image';
+
 const CATEGORIES = [
   { id: 'CRM', label: 'CRM', icon: Database },
   { id: 'Automação', label: 'Automação', icon: Zap },
@@ -15,26 +17,26 @@ const CATEGORIES = [
 
 const TOOLS_DATA = {
   "CRM": [
-    { name: "HubSpot", color: "bg-[#FF7A59]", initial: "H" },
-    { name: "RD Station", color: "bg-[#364A65]", initial: "RD" },
-    { name: "Agendor", color: "bg-[#0055FF]", initial: "A" }
+    { name: "HubSpot", image: "/LOGOS PARCEIROS/CRM/HUBSPOT.png" },
+    { name: "RD Station", image: "/LOGOS PARCEIROS/CRM/RD STATION.png" },
+    { name: "Agendor", image: "/LOGOS PARCEIROS/CRM/Agendor.png" }
   ],
   "Automação": [
-    { name: "RD Station", color: "bg-[#364A65]", initial: "RD" },
-    { name: "HubSpot", color: "bg-[#FF7A59]", initial: "H" }
+    { name: "RD Station", image: "/LOGOS PARCEIROS/AUTOMACAO/RD STATION.png" },
+    { name: "HubSpot", image: "/LOGOS PARCEIROS/AUTOMACAO/HUBSPOT.png" }
   ],
   "Gestão": [
-    { name: "Asana", color: "bg-[#F06A6A]", initial: "As" },
-    { name: "Notion", color: "bg-[#111111] border border-white/20", initial: "N" }
+    { name: "Asana", image: "/LOGOS PARCEIROS/GESTAO/ASANA.png" },
+    { name: "Notion", image: "/LOGOS PARCEIROS/GESTAO/NOTION.png" }
   ],
   "Mídia e performance": [
-    { name: "Google Ads", color: "bg-[#4285F4]", initial: "G" },
-    { name: "Meta Ads", color: "bg-[#0668E1]", initial: "M" },
-    { name: "LinkedIn Ads", color: "bg-[#0A66C2]", initial: "In" }
+    { name: "Google Ads", image: "/LOGOS PARCEIROS/MIDIA E PERFOMANCE/GOOGLE ADS.png" },
+    { name: "Meta Ads", image: "/LOGOS PARCEIROS/MIDIA E PERFOMANCE/META ADS.png" },
+    { name: "LinkedIn Ads", image: "/LOGOS PARCEIROS/MIDIA E PERFOMANCE/LINKEDIN ADS.png" }
   ],
   "Analytics": [
-    { name: "GA4", color: "bg-[#F4B400]", initial: "GA" },
-    { name: "Looker Studio", color: "bg-[#4285F4]", initial: "LS" }
+    { name: "GA4", image: "/LOGOS PARCEIROS/ANALYTICS/GA4.webp" },
+    { name: "Looker Studio", image: "/LOGOS PARCEIROS/ANALYTICS/LOOKER.png" }
   ]
 };
 
@@ -134,8 +136,8 @@ export function TechEcosystemSection() {
                     '--radius': `${radius}px`,
                   } as React.CSSProperties}
                 >
-                  <div className={`w-14 h-14 rounded-full flex items-center justify-center text-white font-display font-bold text-lg shadow-lg border border-white/10 ${tool.color} hover:scale-110 transition-transform duration-300`}>
-                    {tool.initial}
+                  <div className={`w-14 h-14 rounded-full flex items-center justify-center bg-white shadow-lg border border-white/10 hover:scale-110 transition-transform duration-300 overflow-hidden relative p-2`}>
+                    <Image src={tool.image} alt={tool.name} fill className="object-contain p-2" />
                   </div>
                   
                   {/* Tooltip */}

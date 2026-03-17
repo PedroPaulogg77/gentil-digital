@@ -8,11 +8,10 @@ export function Footer() {
       <div className="flex justify-center mb-4">
         <div className="relative w-40 h-12">
           <Image 
-            src="https://drive.google.com/uc?export=view&id=16PeG-d1FfWIPARx8sI-1XmlD73bYP7a0"
+            src="/logo gentil/horizontal.png"
             alt="Gentil Digital"
             fill
             className="object-contain"
-            referrerPolicy="no-referrer"
           />
         </div>
       </div>

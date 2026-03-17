@@ -10,18 +10,21 @@ export function SocialProofSection() {
   
   // Real logos from Google Drive
   const clientLogos = [
-    "https://drive.google.com/uc?export=view&id=1wTokPo7ie-ZTganXvnWEJ2-snumue1C2",
-    "https://drive.google.com/uc?export=view&id=1MRQ4E-P_F9fwCwHyPI6YN92aqgMYN81L",
-    "https://drive.google.com/uc?export=view&id=13oiGgt5l6vDgzRVj5KS6erYufEcqd0Ui",
-    "https://drive.google.com/uc?export=view&id=1DpPTqOT16KpUzKLWm1UoCNxXnIaPtQsL",
-    "https://drive.google.com/uc?export=view&id=1me1WuTz4VuXZEwbXwNuDCjUsfjUO8oW0",
-    "https://drive.google.com/uc?export=view&id=1qpYuyDSt20hXWfmVkrPJgJy5wFX3yc6Y",
-    "https://drive.google.com/uc?export=view&id=14lVt1stCT5dCuY9vzM4SV_mSz0oqYxYN",
-    "https://drive.google.com/uc?export=view&id=1YaomcLf-di-o6yPl8yOfvBdgcgoKmBwT",
-    "https://drive.google.com/uc?export=view&id=1HAgEoAcuG5SWL8Ye8YUMVWdMtDZ94zwv",
-    "https://drive.google.com/uc?export=view&id=1kCRldND9kcpMuXUey9HE61tBVgkRKrHi",
-    "https://drive.google.com/uc?export=view&id=1h69Ux00Edbcc8TeR7d7XGJL_OS9NaVAP",
-    "https://drive.google.com/uc?export=view&id=1oKam6iwuPzh9X_ng83K-QCCKs4t23USI"
+    "/logotipos CLIENTES/AGRO - INDUSTRIA/METALFORCE.png",
+    "/logotipos CLIENTES/AGRO - INDUSTRIA/MOARA.png",
+    "/logotipos CLIENTES/AGRO - INDUSTRIA/RAIZEN.png",
+    "/logotipos CLIENTES/AGRO - INDUSTRIA/SAFE TRACE.png",
+    "/logotipos CLIENTES/AGRO - INDUSTRIA/arbogen.png",
+    "/logotipos CLIENTES/AGRO - INDUSTRIA/cinergis.png",
+    "/logotipos CLIENTES/OUTROS/Stellantis.png",
+    "/logotipos CLIENTES/OUTROS/TSO.png",
+    "/logotipos CLIENTES/OUTROS/jhl.png",
+    "/logotipos CLIENTES/TECNOLOGIA/ITALENTS.png",
+    "/logotipos CLIENTES/TECNOLOGIA/MGITECH.png",
+    "/logotipos CLIENTES/TECNOLOGIA/NGR.png",
+    "/logotipos CLIENTES/TECNOLOGIA/TICWAY.png",
+    "/logotipos CLIENTES/TECNOLOGIA/ULTRACON.png",
+    "/logotipos CLIENTES/TECNOLOGIA/decola.png"
   ];
 
   return (

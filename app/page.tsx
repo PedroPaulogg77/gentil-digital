@@ -17,11 +17,10 @@ export default function Home() {
       <header className="absolute top-0 left-0 right-0 z-50 flex justify-center items-center h-[80px] pointer-events-none">
         <Link href="/" className="relative w-36 h-12 pointer-events-auto">
           <Image 
-            src="https://drive.google.com/uc?export=view&id=16PeG-d1FfWIPARx8sI-1XmlD73bYP7a0"
+            src="/logo gentil/horizontal.png"
             alt="Gentil Digital"
             fill
             className="object-contain"
-            referrerPolicy="no-referrer"
           />
         </Link>
       </header>

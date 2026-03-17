@@ -15,11 +15,10 @@ export function Navbar() {
       <Link href="/" className="flex items-center">
         <div className="relative w-32 h-10">
           <Image 
-            src="https://drive.google.com/uc?export=view&id=16PeG-d1FfWIPARx8sI-1XmlD73bYP7a0"
+            src="/logo gentil/horizontal.png"
             alt="Gentil Digital"
             fill
             className="object-contain object-left"
-            referrerPolicy="no-referrer"
           />
         </div>
       </Link>
