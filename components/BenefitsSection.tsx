@@ -44,7 +44,7 @@ export function BenefitsSection() {
         <BackgroundPaths />
       </div>
       <div className="max-w-6xl mx-auto relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -66,7 +66,7 @@ export function BenefitsSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex flex-col justify-center items-center min-h-[500px]"
+            className="flex flex-col justify-center items-center lg:min-h-[500px]"
           >
             {/* Desktop View: Stacked display cards */}
             <div className="hidden lg:flex w-full justify-center">
@@ -74,7 +74,7 @@ export function BenefitsSection() {
             </div>
 
             {/* Mobile View: 3D Carousel */}
-            <div className="flex lg:hidden w-full justify-center mt-8">
+            <div className="flex lg:hidden w-full justify-center mt-0">
               <Mobile3DCarousel cards={cards} />
             </div>
           </motion.div>

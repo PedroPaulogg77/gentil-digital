@@ -64,6 +64,17 @@ export function Mobile3DCarousel({ cards }: Mobile3DCarouselProps) {
                   duration: 0.5,
                   ease: "easeInOut",
                 }}
+                drag={isCenter ? "x" : false}
+                dragConstraints={{ left: 0, right: 0 }}
+                dragElastic={0.2}
+                onDragEnd={(e, { offset, velocity }) => {
+                  const swipeThreshold = 50;
+                  if (offset.x < -swipeThreshold || velocity.x < -500) {
+                    handleNext();
+                  } else if (offset.x > swipeThreshold || velocity.x > 500) {
+                    handlePrev();
+                  }
+                }}
                 onClick={() => {
                   if (isLeft) handlePrev();
                   if (isRight) handleNext();
