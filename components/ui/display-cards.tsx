@@ -14,26 +14,26 @@ interface DisplayCardProps {
 
 function DisplayCard({
   className,
-  icon = <Expand className="size-5 text-orange-500" />,
+  icon = <Expand className="size-5 text-primary" />,
   title = "Escala operacional",
   description = "Aumente a capacidade de execução sem ampliar headcount.",
-  iconClassName = "text-orange-500",
+  iconClassName = "text-primary",
   titleClassName = "text-white",
 }: DisplayCardProps) {
   return (
     <div
       className={cn(
-        "relative flex h-48 w-[20rem] select-none flex-col justify-start gap-4 rounded-xl border border-white/10 bg-neutral-950 px-6 py-6 transition-all duration-700 hover:border-orange-500/50 hover:bg-neutral-900 hover:shadow-2xl hover:shadow-orange-500/10",
+        "relative flex h-56 w-[22rem] select-none flex-col justify-start gap-4 rounded-xl border border-white/10 bg-neutral-950 px-6 py-6 transition-all duration-700 hover:border-primary/50 hover:bg-neutral-900 hover:shadow-2xl hover:shadow-primary/10",
         className
       )}
     >
       <div>
-        <span className="relative flex items-center justify-center h-10 w-10 rounded-lg border border-orange-500/30 bg-orange-500/10 mb-4">
+        <span className="relative flex items-center justify-center h-12 w-12 rounded-lg border border-primary/30 bg-primary/10 mb-4 text-primary">
           {icon}
         </span>
-        <p className={cn("text-lg font-bold mb-2", titleClassName)}>{title}</p>
+        <p className={cn("text-xl font-bold mb-2 font-display", titleClassName)}>{title}</p>
       </div>
-      <p className="text-sm text-neutral-400 leading-relaxed">{description}</p>
+      <p className="text-sm text-neutral-400 leading-relaxed font-body">{description}</p>
     </div>
   );
 }
@@ -45,10 +45,10 @@ interface DisplayCardsProps {
 export default function DisplayCards({ cards }: DisplayCardsProps) {
   const defaultCards = [
     {
-      className: "[grid-area:stack] hover:-translate-y-12 before:absolute before:w-full before:h-full before:bg-black/80 before:rounded-xl before:transition-opacity before:duration-700 hover:before:opacity-0 hover:z-50 z-10",
+      className: "[grid-area:stack] hover:-translate-y-12 before:absolute before:w-full before:h-full before:bg-black/40 before:rounded-xl before:transition-opacity before:duration-700 hover:before:opacity-0 hover:z-50 z-10",
     },
     {
-      className: "[grid-area:stack] translate-x-6 translate-y-6 hover:-translate-y-6 before:absolute before:w-full before:h-full before:bg-black/60 before:rounded-xl before:transition-opacity before:duration-700 hover:before:opacity-0 hover:z-50 z-20",
+      className: "[grid-area:stack] translate-x-6 translate-y-6 hover:-translate-y-6 before:absolute before:w-full before:h-full before:bg-black/40 before:rounded-xl before:transition-opacity before:duration-700 hover:before:opacity-0 hover:z-50 z-20",
     },
     {
       className: "[grid-area:stack] translate-x-12 translate-y-12 hover:-translate-y-0 before:absolute before:w-full before:h-full before:bg-black/40 before:rounded-xl before:transition-opacity before:duration-700 hover:before:opacity-0 hover:z-50 z-30",

@@ -3,70 +3,72 @@
 import { motion } from 'motion/react';
 import { Maximize, ShieldCheck, UserPlus, Combine } from 'lucide-react';
 import { BackgroundPaths } from '@/components/ui/background-paths';
+import DisplayCards from '@/components/ui/display-cards';
 
 export function BenefitsSection() {
-  const benefits = [
+  const cards = [
     {
-      icon: <Maximize className="w-6 h-6" />,
+      icon: <Maximize className="size-5 text-primary" />,
       title: "Escala operacional",
-      description: "Aumente a capacidade de execução sem ampliar headcount."
+      description: "Aumente a capacidade de execução sem ampliar headcount.",
+      className:
+        "[grid-area:stack] hover:-translate-y-16 hover:-translate-x-12 transition-all duration-500 before:absolute before:w-full before:h-full before:bg-black/60 before:rounded-xl before:transition-opacity before:duration-500 hover:before:opacity-0 hover:z-50 z-10",
     },
     {
-      icon: <ShieldCheck className="w-6 h-6" />,
+      icon: <ShieldCheck className="size-5 text-primary" />,
       title: "Governança",
-      description: "Processos, rituais e indicadores claros."
+      description: "Processos, rituais e indicadores claros.",
+      className:
+        "[grid-area:stack] translate-x-6 translate-y-6 hover:-translate-y-8 hover:-translate-x-4 transition-all duration-500 before:absolute before:w-full before:h-full before:bg-black/40 before:rounded-xl before:transition-opacity before:duration-500 hover:before:opacity-0 hover:z-50 z-20",
     },
     {
-      icon: <UserPlus className="w-6 h-6" />,
-      title: "Especialistas sob demanda",
-      description: "Profissionais técnicos alocados conforme a necessidade do projeto."
+      icon: <UserPlus className="size-5 text-primary" />,
+      title: "Especialistas",
+      description: "Profissionais técnicos alocados conforme necessidade.",
+      className:
+        "[grid-area:stack] translate-x-12 translate-y-12 hover:-translate-y-0 hover:translate-x-4 transition-all duration-500 before:absolute before:w-full before:h-full before:bg-black/20 before:rounded-xl before:transition-opacity before:duration-500 hover:before:opacity-0 hover:z-50 z-30",
     },
     {
-      icon: <Combine className="w-6 h-6" />,
-      title: "Integração marketing e vendas",
-      description: "Mais previsibilidade comercial e inteligência de dados."
-    }
+      icon: <Combine className="size-5 text-primary" />,
+      title: "Integração total",
+      description: "Mais previsibilidade comercial e inteligência de dados.",
+      className:
+        "[grid-area:stack] translate-x-[1.125rem] translate-y-[1.125rem] sm:translate-x-18 sm:translate-y-18 hover:translate-y-8 hover:translate-x-12 transition-all duration-500 hover:z-50 z-40",
+    },
   ];
 
   return (
     <section id="beneficios" className="relative py-24 px-6 bg-bg-secondary border-t border-border-default overflow-hidden">
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 opacity-50">
         <BackgroundPaths />
       </div>
       <div className="max-w-6xl mx-auto relative z-10">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4 max-w-3xl mx-auto">
-            Amplie sua operação sem crescer a <span className="text-primary">equipe interna</span>
-          </h2>
-        </motion.div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="text-left"
+          >
+            <div className="badge-primary mb-6 w-fit">Capacidade Produtiva</div>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+              Amplie sua operação sem crescer a <span className="text-primary">equipe interna</span>
+            </h2>
+            <p className="font-body text-base text-text-secondary leading-relaxed mb-6">
+              Escute da nossa diretoria técnica e de operações como garantimos que o seu negócio escale através da orquestração de profissionais experientes, processos maduros e tecnologia de ponta.
+            </p>
+          </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {benefits.map((benefit, idx) => (
-            <motion.div 
-              key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: idx * 0.1 }}
-              className="bg-bg-card/80 backdrop-blur-md border border-border-card rounded-2xl p-8 relative overflow-hidden group hover:-translate-y-2 hover:border-primary/30 hover:shadow-[0_0_30px_rgba(232,123,28,0.15)] transition-all duration-300"
-            >
-              <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-primary to-primary-light opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              
-              <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-6 text-primary group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300">
-                {benefit.icon}
-              </div>
-              <h3 className="font-display text-lg font-bold mb-3">{benefit.title}</h3>
-              <p className="font-body text-sm text-text-secondary leading-relaxed">
-                {benefit.description}
-              </p>
-            </motion.div>
-          ))}
+          <motion.div 
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex justify-center items-center h-[400px]"
+          >
+            <DisplayCards cards={cards} />
+          </motion.div>
         </div>
       </div>
     </section>
