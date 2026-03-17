@@ -7,6 +7,7 @@ import { TalentsSection } from '@/components/TalentsSection';
 import { TechEcosystemSection } from '@/components/TechEcosystemSection';
 import { SocialProofSection } from '@/components/SocialProofSection';
 import { ConversionSection } from '@/components/ConversionSection';
+import { DisplayCardsDemo } from '@/components/display-cards-demo';
 import { Footer } from '@/components/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -27,6 +28,7 @@ export default function Home() {
       <HeroSection />
       <MarqueeSection />
       <IdentificationSection />
+      <DisplayCardsDemo />
       <ModelSection />
       <BenefitsSection />
       <TalentsSection />
