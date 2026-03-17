@@ -136,7 +136,7 @@ export function TechEcosystemSection() {
                     '--radius': `${radius}px`,
                   } as React.CSSProperties}
                 >
-                  <div className={`w-14 h-14 rounded-full flex items-center justify-center bg-white shadow-lg border border-white/10 hover:scale-110 transition-transform duration-300 overflow-hidden relative p-2`}>
+                  <div className={`w-14 h-14 rounded-full flex items-center justify-center bg-white/5 backdrop-blur-md shadow-lg border border-white/10 hover:scale-110 transition-transform duration-300 overflow-hidden relative p-2`}>
                     <Image src={tool.image} alt={tool.name} fill className="object-contain p-2" />
                   </div>
                   
