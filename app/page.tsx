@@ -1,5 +1,5 @@
 import { HeroSection } from '@/components/HeroSection';
-import { MarqueeSection } from '@/components/MarqueeSection';
+import { GovernanceSection } from '@/components/GovernanceSection';
 import { IdentificationSection } from '@/components/IdentificationSection';
 import { ModelSection } from '@/components/ModelSection';
 import { BenefitsSection } from '@/components/BenefitsSection';
@@ -25,7 +25,7 @@ export default function Home() {
         </Link>
       </header>
       <HeroSection />
-      <MarqueeSection />
+      <GovernanceSection />
       <IdentificationSection />
       <ModelSection />
       <BenefitsSection />
