@@ -86,15 +86,16 @@ export function TechEcosystemSection() {
               return (
                 <motion.div
                   key={tool.name}
-                  initial={{ opacity: 0, scale: 0, filter: 'blur(10px)' }}
-                  animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
-                  exit={{ opacity: 0, scale: 0, filter: 'blur(10px)' }}
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1, type: "spring" }}
                   className="absolute top-1/2 left-1/2 z-20 group cursor-pointer"
                   style={{
                     animation: `orbit-cw 25s linear infinite`,
                     '--start-angle': `${angle}deg`,
                     '--radius': `min(130px, 40vw)`,
+                    willChange: 'transform',
                   } as React.CSSProperties}
                 >
                   <div className="w-14 h-14 rounded-full flex items-center justify-center bg-white/5 backdrop-blur-md shadow-lg border border-white/10 hover:scale-110 transition-transform duration-300 overflow-hidden relative p-2">
@@ -115,15 +116,16 @@ export function TechEcosystemSection() {
               return (
                 <motion.div
                   key={tool.name}
-                  initial={{ opacity: 0, scale: 0, filter: 'blur(10px)' }}
-                  animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
-                  exit={{ opacity: 0, scale: 0, filter: 'blur(10px)' }}
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0 }}
                   transition={{ duration: 0.5, delay: (innerTools.length + index) * 0.1, type: "spring" }}
                   className="absolute top-1/2 left-1/2 z-20 group cursor-pointer"
                   style={{
-                    animation: `orbit-ccw 35s linear infinite`, // rotate counter-clockwise and slower
+                    animation: `orbit-ccw 35s linear infinite`,
                     '--start-angle': `${angle}deg`,
                     '--radius': `min(210px, 47vw)`,
+                    willChange: 'transform',
                   } as React.CSSProperties}
                 >
                   <div className="w-16 h-16 rounded-full flex items-center justify-center bg-white/5 backdrop-blur-md shadow-lg border border-white/10 hover:scale-110 transition-transform duration-300 overflow-hidden relative p-2">

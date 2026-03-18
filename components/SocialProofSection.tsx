@@ -1,9 +1,9 @@
 'use client';
 
 import { motion } from 'motion/react';
-import { Play } from 'lucide-react';
 import Image from 'next/image';
 import { SectionDivider } from './SectionDivider';
+import { YouTubeFacade } from './YouTubeFacade';
 
 export function SocialProofSection() {
   const youtubeVideos = [
@@ -60,13 +60,7 @@ export function SocialProofSection() {
               transition={{ duration: 0.6, delay: idx * 0.1 }}
               className="relative aspect-[9/16] bg-black rounded-2xl overflow-hidden border border-border-card shrink-0 w-[85vw] sm:w-[300px] md:w-auto snap-center shadow-2xl"
             >
-              <iframe
-                src={`https://www.youtube.com/embed/${vid.id}?modestbranding=1&rel=0&playsinline=1`}
-                title={vid.title}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="absolute inset-0 w-full h-full border-0"
-              />
+              <YouTubeFacade videoId={vid.id} title={vid.title} />
             </motion.div>
           ))}
         </div>
