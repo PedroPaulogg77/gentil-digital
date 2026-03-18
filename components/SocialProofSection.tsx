@@ -94,12 +94,6 @@ export function SocialProofSection() {
           </div>
         </motion.div>
       </div>
-      <style dangerouslySetInnerHTML={{__html: `
-        @keyframes marquee {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-      `}} />
     </section>
   );
 }

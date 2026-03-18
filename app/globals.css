@@ -140,11 +140,28 @@
   }
 }
 
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 @layer utilities {
   .animate-fade-in {
     animation: fade-in 0.5s ease-out forwards;
   }
   .animate-fade-up {
     animation: fade-up 0.5s ease-out forwards;
+  }
+  .animate-hero-fade-down {
+    animation: heroFadeDown 0.5s ease-out both;
+  }
+  .animate-hero-fade-up {
+    animation: heroFadeUp 0.5s ease-out both;
+  }
+  .animate-hero-fade-up-d2 {
+    animation: heroFadeUp 0.5s ease-out 0.2s both;
+  }
+  .animate-hero-fade-up-d3 {
+    animation: heroFadeUp 0.5s ease-out 0.3s both;
   }
 }

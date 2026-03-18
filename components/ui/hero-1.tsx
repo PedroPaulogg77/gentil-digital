@@ -49,10 +49,7 @@ export function Hero({
       <div className="relative z-10 flex flex-col items-center justify-center mb-24 md:mb-16">
         {/* Eyebrow */}
         {eyebrow && (
-          <div
-            className="flex justify-center mb-6"
-            style={{ animation: 'heroFadeDown 0.5s ease-out both' }}
-          >
+          <div className="flex justify-center mb-6 animate-hero-fade-down">
             <Link href={ctaHref} className="group">
               <span
                 className="text-xs text-white/70 font-body mx-auto px-4 py-1.5
@@ -77,18 +74,15 @@ export function Hero({
         <div
           className="mt-4 mb-8 text-balance
           text-sm sm:text-base tracking-tight text-white/60 font-body
-          md:text-lg max-w-[340px] sm:max-w-lg md:max-w-4xl mx-auto"
-          style={{ animation: 'heroFadeUp 0.5s ease-out 0.2s both' }}
+          md:text-lg max-w-[340px] sm:max-w-lg md:max-w-4xl mx-auto
+          animate-hero-fade-up-d2"
         >
           {subtitle}
         </div>
 
         {/* CTA */}
         {ctaLabel && (
-          <div
-            className="flex justify-center"
-            style={{ animation: 'heroFadeUp 0.5s ease-out 0.3s both' }}
-          >
+          <div className="flex justify-center animate-hero-fade-up-d3">
             <Link
               href={ctaHref}
               className="relative z-20 inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 font-body font-medium tracking-tighter text-[15px] sm:text-lg whitespace-nowrap

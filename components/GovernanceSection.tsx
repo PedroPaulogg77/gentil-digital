@@ -136,8 +136,7 @@ export function GovernanceSection() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -50 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className="absolute inset-0 w-full h-full flex flex-col items-center justify-center"
-              style={{ willChange: 'transform, opacity' }}
+              className="absolute inset-0 w-full h-full flex flex-col items-center justify-center will-change-[transform,opacity]"
             >
               {STEPS[currentStep].content}
             </motion.div>
