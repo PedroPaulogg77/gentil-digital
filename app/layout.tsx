@@ -6,14 +6,16 @@ const funnelDisplay = Funnel_Display({
   subsets: ['latin'],
   variable: '--font-display',
   weight: ['300', '400', '500', '600', '700', '800'],
-  display: 'swap',
+  display: 'optional',
+  preload: true,
 });
 
 const montserrat = Montserrat({
   subsets: ['latin'],
   variable: '--font-body',
   weight: ['300', '400', '500', '600', '700', '800', '900'],
-  display: 'swap',
+  display: 'optional',
+  preload: true,
 });
 
 export const metadata: Metadata = {

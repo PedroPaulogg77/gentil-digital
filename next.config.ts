@@ -23,6 +23,9 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  experimental: {
+    optimizeCss: true,
+  },
   eslint: {
     ignoreDuringBuilds: true,
   },

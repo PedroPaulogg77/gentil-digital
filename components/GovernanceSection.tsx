@@ -12,9 +12,9 @@ const STEPS = [
         <p className="font-body text-lg md:text-xl text-text-secondary mb-4 font-light max-w-2xl">
           Hoje existem milhares de designers, social medias e ferramentas de IA criando posts bonitos.
         </p>
-        <h3 className="font-display text-3xl md:text-5xl font-bold tracking-tight mb-4 text-white">
+        <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight mb-4 text-white">
           A estética deixou de <br className="hidden md:block"/> ser diferencial.
-        </h3>
+        </h2>
         <span className="inline-flex items-center gap-4 text-primary font-display font-bold text-2xl md:text-3xl mt-2">
           <span className="hidden md:block w-12 h-[3px] bg-primary rounded-full"></span>
           Virou commodity.
@@ -26,9 +26,9 @@ const STEPS = [
     id: 2,
     content: (
       <div className="flex flex-col items-center justify-center h-full text-center px-4">
-        <h3 className="font-display text-3xl md:text-5xl font-bold tracking-tight mb-8 text-white">
+        <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight mb-8 text-white">
           Sem governança, o <br className="hidden md:block"/> marketing vira <span className="text-primary blur-[0.3px]">tentativa.</span>
-        </h3>
+        </h2>
         <div className="flex flex-col md:flex-row gap-4 md:gap-6 justify-center items-center w-full max-w-3xl">
           <div className="bg-bg-card border border-border-default rounded-xl p-6 shadow-md w-full md:w-1/3 hover:border-primary/50 transition-colors">
             <span className="block text-primary text-sm font-bold mb-2">01</span>
@@ -50,9 +50,9 @@ const STEPS = [
     id: 3,
     content: (
       <div className="flex flex-col items-center justify-center h-full text-center px-4">
-        <h3 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-white leading-tight">
+        <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-white leading-tight">
           Empresas maduras <br className="hidden md:block"/><span className="text-text-secondary font-light">não terceirizam posts.</span>
-        </h3>
+        </h2>
         <div className="flex items-center gap-4 font-display font-bold text-2xl md:text-4xl text-primary mt-4">
           Terceirizam governança.
         </div>
@@ -64,9 +64,9 @@ const STEPS = [
     content: (
       <div className="flex flex-col md:flex-row items-center justify-center h-full gap-8 md:gap-16 w-full text-left px-4">
         <div className="md:w-1/2 text-center md:text-right">
-          <h3 className="font-display text-3xl md:text-5xl font-bold tracking-tight mt-4 text-white">
+          <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight mt-4 text-white">
             O que continua raro <br className="hidden md:block"/> é <span className="text-primary">estrutura.</span>
-          </h3>
+          </h2>
         </div>
         <div className="hidden md:block w-px h-32 bg-border-default/50"></div>
         <div className="md:w-1/2 flex justify-center md:justify-start">
@@ -132,11 +132,12 @@ export function GovernanceSection() {
           <AnimatePresence mode="wait">
             <motion.div
               key={currentStep}
-              initial={{ opacity: 0, x: 50, filter: 'blur(10px)' }}
-              animate={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
-              exit={{ opacity: 0, x: -50, filter: 'blur(10px)' }}
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -50 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
               className="absolute inset-0 w-full h-full flex flex-col items-center justify-center"
+              style={{ willChange: 'transform, opacity' }}
             >
               {STEPS[currentStep].content}
             </motion.div>
@@ -150,13 +151,13 @@ export function GovernanceSection() {
               <button
                 key={step.id}
                 onClick={() => setCurrentStep(index)}
-                className="group relative flex items-center justify-center h-4 cursor-pointer"
+                className="group relative flex items-center justify-center min-h-[48px] min-w-[48px] cursor-pointer"
                 aria-label={`Ir para o slide ${index + 1}`}
               >
-                <div 
+                <div
                   className={`h-1.5 rounded-full transition-all duration-300 ${
-                    index === currentStep 
-                      ? 'w-8 bg-primary shadow-[0_0_10px_rgba(232,123,28,0.5)]' 
+                    index === currentStep
+                      ? 'w-8 bg-primary shadow-[0_0_10px_rgba(232,123,28,0.5)]'
                       : 'w-2 bg-text-muted hover:bg-text-secondary hover:w-4'
                   }`}
                 />
