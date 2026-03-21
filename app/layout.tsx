@@ -51,11 +51,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </noscript>
         {children}
         <Script
+          id="leadster-id"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: `window.neuroleadId="TQKOGYwzysLRpXnZMARdifHnA";` }}
+        />
+        <Script
           id="leadster-script"
           strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `(function(a,b,c,d){try{var e=b.head||b.getElementsByTagName("head")[0];var f=b.createElement("script");f.setAttribute("src",c);f.setAttribute("charset","UTF-8");f.defer=true;a.neuroleadId=d;e.appendChild(f)}catch(g){}})(window,document,"https://cdn.leadster.com.br/neurolead/neurolead.min.js","TQKOGYwzysLRpXnZMARdifHnA")`
-          }}
+          src="https://cdn.leadster.com.br/neurolead/neurolead.min.js"
         />
       </body>
     </html>
