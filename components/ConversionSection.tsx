@@ -2,10 +2,13 @@
 
 import { motion } from 'motion/react';
 import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 import { SectionDivider } from './SectionDivider';
 
 export function ConversionSection() {
   const router = useRouter();
+  const [loading, setLoading] = useState(false);
+  const [erro, setErro] = useState<string | null>(null);
 
   return (
     <section id="contato" className="py-24 px-6 bg-bg-secondary relative overflow-hidden">
@@ -39,13 +42,37 @@ export function ConversionSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <form 
-                className="space-y-4" 
-                onSubmit={(e) => {
+              <form
+                className="space-y-4"
+                onSubmit={async (e) => {
                   e.preventDefault();
-                  // Simulate form submission process if needed in the future
-                  // ...
-                  router.push('/obrigado');
+                  setErro(null);
+                  setLoading(true);
+                  const form = e.currentTarget;
+                  const data = {
+                    nome: (form.elements.namedItem('nome') as HTMLInputElement).value,
+                    empresa: (form.elements.namedItem('empresa') as HTMLInputElement).value,
+                    email: (form.elements.namedItem('email') as HTMLInputElement).value,
+                    whatsapp: (form.elements.namedItem('whatsapp') as HTMLInputElement).value,
+                    faturamento: (form.elements.namedItem('faturamento') as HTMLSelectElement).value,
+                    segmento: (form.elements.namedItem('segmento') as HTMLSelectElement).value,
+                    momento: (form.elements.namedItem('momento') as HTMLSelectElement).value,
+                  };
+                  try {
+                    const res = await fetch('/api/send', {
+                      method: 'POST',
+                      headers: { 'Content-Type': 'application/json' },
+                      body: JSON.stringify(data),
+                    });
+                    if (!res.ok) {
+                      const json = await res.json();
+                      throw new Error(json.error || 'Erro ao enviar formulário.');
+                    }
+                    router.push('/obrigado');
+                  } catch (err) {
+                    setErro(err instanceof Error ? err.message : 'Erro ao enviar. Tente novamente.');
+                    setLoading(false);
+                  }
                 }}
               >
                 <div className="relative">
@@ -183,8 +210,11 @@ export function ConversionSection() {
                   </div>
                 </div>
 
-                <button type="submit" className="btn-primary w-full mt-4">
-                  Agendar conversa estratégica
+                {erro && (
+                  <p className="text-red-500 text-sm text-center">{erro}</p>
+                )}
+                <button type="submit" disabled={loading} className="btn-primary w-full mt-4 disabled:opacity-60 disabled:cursor-not-allowed">
+                  {loading ? 'Enviando...' : 'Agendar conversa estratégica'}
                 </button>
               </form>
             </motion.div>
